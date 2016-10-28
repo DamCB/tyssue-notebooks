@@ -1,4 +1,3 @@
-# %load leg_join_morpho.py
 import pandas as pd
 import numpy as np
 import json
@@ -6,7 +5,6 @@ import matplotlib
 matplotlib.use('Agg')
 
 import matplotlib.pylab as plt
-from scipy import optimize
 
 from tyssue.core.sheet import Sheet
 from tyssue import config
@@ -162,10 +160,12 @@ def run_sim(sheet, apopto_cells,
 
 
 def single_sim(args):
+    l, g, dirname, nb_dir = args
+    print('Parsing' + dirname, nb_dir)
 
-    l, g, dirname = args
-    datasets = hdf5.load_datasets('/home/guillaume/Notebooks/tyssue/leg_joint/before.hf5')
-    with open('/home/guillaume/Notebooks/tyssue/leg_joint/specs.json', 'r') as sp_file:
+    data_file = os.path.join(nb_dir, '../data/hf5/before_apoptosis.hf5')
+    datasets = hdf5.load_datasets(data_file)
+    with open(os.path.join(nb_dir, 'specs.json'), 'r') as sp_file:
         specs = json.load(sp_file)
     sheet2 = Sheet('fold', datasets, specs)
     res = solver.find_energy_min(sheet2, geom, model,
