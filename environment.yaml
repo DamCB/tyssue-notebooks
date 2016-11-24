@@ -3,9 +3,7 @@ channels: !!python/tuple
 - !!python/unicode
   'defaults'
 - !!python/unicode
-  'glyg'
-- !!python/unicode
   'conda-forge'
 
 dependencies:
-- tyssue=0.2
+- tyssue
