@@ -1,0 +1,118 @@
+name: tyssue
+channels: !!python/tuple
+- !!python/unicode
+  'defaults'
+- !!python/unicode
+  'glyg'
+- !!python/unicode
+  'conda-forge'
+
+dependencies:
+- _nb_ext_conf
+- anaconda-client
+- astroid
+- cairo
+- clyent
+- coverage
+- cycler
+- decorator
+- entrypoints
+- fontconfig
+- freeglut
+- freetype
+- glib
+- harfbuzz
+- hdf5
+- ipykernel
+- ipython
+- ipython_genutils
+- ipywidgets
+- jedi
+- jinja2
+- jsonschema
+- jupyter
+- jupyter_client
+- jupyter_console
+- jupyter_core
+- lazy-object-proxy
+- libffi
+- libgfortran
+- libpng
+- libsodium
+- libxml2
+- markdown
+- markupsafe
+- matplotlib
+- mistune
+- mkl
+- nb_anacondacloud
+- nb_conda
+- nb_conda_kernels
+- nbconvert
+- nbformat
+- nbpresent
+- notebook
+- numexpr
+- numpy
+- openssl
+- pandas
+- pango
+- path.py
+- pexpect
+- pickleshare
+- pip
+- pixman
+- prompt_toolkit
+- ptyprocess
+- py
+- pyflakes
+- pygments
+- pylint
+- pyopengl
+- pyparsing
+- pyqt
+- pytables
+- pytest
+- pytest-cov
+- python
+- python-dateutil
+- pytz
+- pyyaml
+- pyzmq
+- qt
+- qtconsole
+- readline
+- requests
+- scipy
+- seaborn
+- setuptools
+- simplegeneric
+- sip
+- six
+- sqlite
+- terminado
+- tk
+- tornado
+- traitlets
+- vispy
+- wcwidth
+- wheel
+- widgetsnbextension
+- wrapt
+- xz
+- yaml
+- zeromq
+- zlib
+- tyssue
+- pip:
+  - epc
+  - ipython-genutils
+  - jupyter-client
+  - jupyter-console
+  - jupyter-core
+  - nb-anacondacloud
+  - nb-conda
+  - nb-conda-kernels
+  - prompt-toolkit
+  - sexpdata
+  - tables
