@@ -1,0 +1,9 @@
+name: tyssue
+channels: !!python/tuple
+- !!python/unicode
+  'defaults'
+- !!python/unicode
+  'conda-forge'
+
+dependencies:
+- tyssue
