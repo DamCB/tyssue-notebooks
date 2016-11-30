@@ -1,0 +1,38 @@
+point A -1.0 -1.0 -1.0
+point B -1.0 -1.0 1.0
+point C -1.0 1.0 -1.0
+point D -1.0 1.0 1.0
+point E 1.0 -1.0 -1.0
+point F 1.0 -1.0 1.0
+point G 1.0 1.0 -1.0
+point H 1.0 1.0 1.0
+face ABDC A
+face ABDC B
+face ABDC D
+face ABDC C
+normal ABDC -1.0 0.0 0.0
+face GHFE G
+face GHFE H
+face GHFE F
+face GHFE E
+normal GHFE 1.0 -0.0 -0.0
+face ACGE A
+face ACGE C
+face ACGE G
+face ACGE E
+normal ACGE 0.0 0.0 -1.0
+face FHDB F
+face FHDB H
+face FHDB D
+face FHDB B
+normal FHDB -0.0 -0.0 1.0
+face AEFB A
+face AEFB E
+face AEFB F
+face AEFB B
+normal AEFB 0.0 -1.0 0.0
+face DHGC D
+face DHGC H
+face DHGC G
+face DHGC C
+normal DHGC -0.0 1.0 -0.0

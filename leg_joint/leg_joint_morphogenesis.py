@@ -2,27 +2,23 @@ import pandas as pd
 import numpy as np
 import json
 import matplotlib
-matplotlib.use('Agg')
 
 import matplotlib.pylab as plt
 
 from tyssue.core.sheet import Sheet
-from tyssue import config
-
-from tyssue.core.generation import create_anchors
 
 from tyssue.geometry.sheet_geometry import SheetGeometry as geom
 from tyssue.dynamics.apoptosis_model import SheetApoptosisModel as model
-from tyssue.dynamics.sheet_vertex_model import SheetModel as basemodel
 from tyssue.solvers.sheet_vertex_solver import Solver as solver
-from tyssue.core.objects import get_opposite
 from tyssue.draw.plt_draw import sheet_view
 from tyssue.io import hdf5
 from tyssue.behaviors.sheet_events import SheetEvents
 from tyssue.behaviors.behaviors import apoptosis_time_table
 import os
 import logging
+
 logger = logging.Logger('event_log')
+matplotlib.use('Agg')
 
 min_settings = {
     'minimize': {
@@ -121,14 +117,17 @@ def time_step(face_events, events,
         if np.isnan(face):
             continue
         for event_name, event_arg in evts.dropna().items():
-            if ((not sheet.face_df.loc[face, 'is_alive']) or
-                np.isnan(sheet.face_df.loc[face, 'is_alive'])):
+            if (
+                (not sheet.face_df.loc[face, 'is_alive']) or
+                np.isnan(sheet.face_df.loc[face, 'is_alive'])
+                    ):
                 logger.info(
                     'skipped: face: {}, event: {}'.format(face, event_name))
                 continue
             events[event_name](face, event_arg)
             logger.info('done: face: {}, event: {}'.format(face, event_name))
     res = solver.find_energy_min(sheet, geom, model, **min_settings)
+    return res
 
 
 def run_sim(sheet, apopto_cells,
