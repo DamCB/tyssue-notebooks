@@ -16,7 +16,7 @@
    version="1.1"
    inkscape:version="0.91 r13725"
    sodipodi:docname="monolayer_t1_transition.svg"
-   inkscape:export-filename="/home/guillaume/Dev/tyssue-notebooks/data/png/monolayer_t1_transition.png"
+   inkscape:export-filename="/home/guillaume/Dev/tyssue-notebooks/data/png/IH_transition.png"
    inkscape:export-xdpi="90"
    inkscape:export-ydpi="90">
   <defs
@@ -37,9 +37,9 @@
      inkscape:snap-global="true"
      inkscape:object-paths="true"
      inkscape:object-nodes="true"
-     inkscape:zoom="0.5"
-     inkscape:cx="253.56425"
-     inkscape:cy="627.35389"
+     inkscape:zoom="1"
+     inkscape:cx="230.33551"
+     inkscape:cy="251.19585"
      inkscape:window-x="0"
      inkscape:window-y="27"
      inkscape:window-maximized="1"
