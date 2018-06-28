@@ -10,6 +10,5 @@ dependencies:
     - jupyter
     - notebook
     - ipywidgets
-    - pythreejs
     - ipyvolume
     - tyssue
